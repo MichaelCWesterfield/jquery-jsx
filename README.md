@@ -1,4 +1,4 @@
-This code is a simplified implementation of a minimalistic version of React-like functionality using jQuery and Babel. It allows you to create and render JSX-like components using jQuery, manage state within those components, and use a basic form of context to share data between components. Here is the breakdown section by section:
+This code is a simplified implementation of a minimalistic version of React-like functionality using jQuery and Babel. It allows you to create and render JSX-like components using jQuery, manage state within those components, and use a basic form of context to share data between components. Here is the break down of the code section by section:
 
 1. Dependencies:
    - The code requires the presence of jQuery and Babel to work correctly.
@@ -51,7 +51,8 @@ How to use this code:
 1. Include the required dependencies: jQuery and Babel.
 
 2. Write your custom components using the custom JSX-like syntax. For example:
-   
+
+```jsx
 const MyComponent = () => {
   const [count, setCount] = $.fn.useState(0, MyComponent);
 
@@ -66,13 +67,17 @@ const MyComponent = () => {
     </div>
   );
 };
+```
 
 3. Use the `render` function to render your custom component into a specific DOM element. For example:
 
+```jsx
 $("#app").render(MyComponent);
+```
 
 4. To use context, you can do the following:
 
+```jsx
 const myContext = {
   message: "Hello from context!",
 };
@@ -82,6 +87,7 @@ const MyComponentWithContext = () => {
 
   return <div></div>;
 };
+```
 
 In this example, `MyComponentWithContext` will update its text content whenever the `message` property of `myContext` changes.
 
